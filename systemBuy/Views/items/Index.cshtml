@@ -1,0 +1,61 @@
+﻿@model IEnumerable<systemBuy.Models.items>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="uk-table uk-table-striped uk-table-hover">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.nameItem)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.descriptions)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.brand)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.serialNamber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.barcode)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbod>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.nameItem)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.descriptions)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.brand)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.serialNamber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.barcode)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.id })
+                </td>
+            </tr>
+        }
+    </tbod>
+</table>

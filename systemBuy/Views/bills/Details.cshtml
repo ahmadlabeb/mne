@@ -1,0 +1,58 @@
+﻿@model systemBuy.Models.bills
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2>تفاصيل الفاتورة</h2>
+
+<div>
+    <h4>Bills</h4>
+    <hr />
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+            </tr>
+        </thead>
+    </table>
+    @*<dl class="uk-description-list uk-description-list-divider">
+        <dt>
+            @Html.DisplayNameFor(model => model.NameBuy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NameBuy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.billNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.billNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateBill)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateBill)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.theReviewDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.theReviewDate)
+        </dd>
+
+    </dl>*@
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id },new {@class="uk-button uk-button-primary" }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

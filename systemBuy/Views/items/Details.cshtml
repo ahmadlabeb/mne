@@ -1,0 +1,60 @@
+﻿@model systemBuy.Models.items
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>items</h4>
+    <hr />
+    <dl class="uk-description-list uk-description-list-divider">
+        <dt>
+            @Html.DisplayNameFor(model => model.nameItem)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nameItem)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.descriptions)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descriptions)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.brand)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.brand)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.serialNamber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.serialNamber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.barcode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.barcode)
+        </dd>
+
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id },new { @class= "uk-button uk-button-primary" }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
