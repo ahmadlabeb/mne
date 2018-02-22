@@ -28,10 +28,15 @@ namespace systemBuy.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             bills bills = db.bills.Find(id);
+
+
+         
             if (bills == null)
             {
                 return HttpNotFound();
             }
+            //Session["iditems"] = id;
+
             return View(bills);
         }
 
@@ -67,6 +72,20 @@ namespace systemBuy.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             bills bills = db.bills.Find(id);
+            //var result = from bill in db.bills
+            //             join item in db.items
+            //             on bill.id equals item.Itembills_id
+            //             where bill.id == id
+            //             select bill;
+            //var group = from b in result
+            //            group b by b.item.
+            //           into gr
+            //            select new itrationsBills
+            //            {
+            //                dateTime=gr.Key,
+            //                items = gr
+            //            };
+           
             if (bills == null)
             {
                 return HttpNotFound();
@@ -114,6 +133,29 @@ namespace systemBuy.Controllers
             db.bills.Remove(bills);
             db.SaveChanges();
             return RedirectToAction("Index");
+        }
+        public ActionResult invoice()
+        {
+            var id = (int)Session["iditems"];
+            //var result = from i in db.items
+            //             join b in db.bills
+            //             on i.Itembills_id equals b.id
+            //             where b.id == id
+            //             select i;
+            //var itemGroups = from r in result
+            //                 group r by r.bills.NameBuy
+            //               into gr
+            //                 select new itrationsBills
+            //                 {
+            //                     NameBuy = gr.Key,
+            //                     items = gr
+            //                 };
+            var result = from i in db.items
+                         where i.Itembills_id == id
+                         select i;
+            //var result = db.items.Where(a => a.Itembills_id == id);
+
+            return View(result);
         }
 
         protected override void Dispose(bool disposing)

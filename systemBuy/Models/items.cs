@@ -23,9 +23,8 @@ namespace systemBuy.Models
         [DisplayName("الرقم التسلسلي")]
         public string serialNamber { get; set; }
         [Required]
-        [DisplayName("قارء الباركود")]
+        [DisplayName("قارئ الباركود")]
         public string barcode { get; set; }
-
         public int Itembills_id { get; set; }
         public virtual bills bills { get; set; }
 

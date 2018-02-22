@@ -14,13 +14,12 @@ namespace systemBuy.Models
         // automatically whenever you change your model schema, please use data migrations.
         // For more information refer to the documentation:
         // http://msdn.microsoft.com/en-us/data/jj591621.aspx
-    
         public systemBuyContext() : base("name=systemBuyContext")
         {
         }
 
-        public System.Data.Entity.DbSet<systemBuy.Models.bills> bills { get; set; }
+        public DbSet<systemBuy.Models.bills> bills { get; set; }
 
-        public System.Data.Entity.DbSet<systemBuy.Models.items> items { get; set; }
+        public DbSet<systemBuy.Models.items> items { get; set; }
     }
 }

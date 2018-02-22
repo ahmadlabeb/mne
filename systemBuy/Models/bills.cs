@@ -24,5 +24,7 @@ namespace systemBuy.Models
         public DateTime theReviewDate { get; set; }
         public virtual ICollection<items> item { get; set; }
         public virtual ICollection<CurruncyUnit> curruncy { get; set; }
+        public virtual ICollection<sideBuy> sidebuy { get; set; }
+
     }
 }

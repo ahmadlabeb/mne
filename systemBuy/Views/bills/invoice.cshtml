@@ -1,0 +1,61 @@
+﻿@model systemBuy.Models.items
+
+@{
+    ViewBag.Title = "invoice";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2>invoice</h2>
+
+<div>
+    <h4>items</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nameItem)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nameItem)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.descriptions)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descriptions)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.brand)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.brand)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.serialNamber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.serialNamber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.barcode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.barcode)
+        </dd>
+
+      
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

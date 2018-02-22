@@ -112,6 +112,12 @@
     <Content Include="App_Data\systemBuyContext_log.ldf">
       <DependentUpon>systemBuyContext.mdf</DependentUpon>
     </Content>
+    <Content Include="Content\css\bootstrap.css" />
+    <Content Include="Content\css\bootstrap.min.css" />
+    <Content Include="Content\css\font-awesome.min.css" />
+    <Content Include="Content\css\mdb.css" />
+    <Content Include="Content\css\mdb.min.css" />
+    <Content Include="Content\css\style.css" />
     <Content Include="Content\style.css" />
     <Content Include="Content\uikit-rtl.css" />
     <Content Include="Content\uikit-rtl.min.css" />
@@ -119,9 +125,31 @@
     <Content Include="Content\uikit.min.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="imge\light.jpg" />
-    <Content Include="imge\logo.png" />
-    <Content Include="imge\logo2.png" />
+    <Content Include="img\light.jpg" />
+    <Content Include="img\lightbox\default-skin.png" />
+    <Content Include="img\lightbox\default-skin.svg" />
+    <Content Include="img\lightbox\preloader.gif" />
+    <Content Include="img\logo.png" />
+    <Content Include="img\logo2.png" />
+    <Content Include="img\overlays\01.png" />
+    <Content Include="img\overlays\02.png" />
+    <Content Include="img\overlays\03.png" />
+    <Content Include="img\overlays\04.png" />
+    <Content Include="img\overlays\05.png" />
+    <Content Include="img\overlays\06.png" />
+    <Content Include="img\overlays\07.png" />
+    <Content Include="img\overlays\08.png" />
+    <Content Include="img\overlays\09.png" />
+    <Content Include="img\pal.png" />
+    <Content Include="img\svg\arrow_left.svg" />
+    <Content Include="img\svg\arrow_right.svg" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\js\bootstrap.js" />
+    <Content Include="Scripts\js\bootstrap.min.js" />
+    <Content Include="Scripts\js\jquery-3.2.1.min.js" />
+    <Content Include="Scripts\js\mdb.js" />
+    <Content Include="Scripts\js\mdb.min.js" />
+    <Content Include="Scripts\js\popper.min.js" />
     <Content Include="Scripts\uikit-icons.js" />
     <Content Include="Scripts\uikit-icons.min.js" />
     <Content Include="Scripts\uikit.js" />
@@ -151,10 +179,16 @@
     <Compile Include="Migrations\201802191129174_CurruncyTable.Designer.cs">
       <DependentUpon>201802191129174_CurruncyTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201802201218272_tableSideBuy.cs" />
+    <Compile Include="Migrations\201802201218272_tableSideBuy.Designer.cs">
+      <DependentUpon>201802201218272_tableSideBuy.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\bills.cs" />
     <Compile Include="Models\CurruncyUnit.cs" />
     <Compile Include="Models\items.cs" />
+    <Compile Include="Models\itrationsBills.cs" />
+    <Compile Include="Models\sideBuy.cs" />
     <Compile Include="Models\systemBuyContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -163,6 +197,58 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\roboto\Roboto-Bold.eot" />
+    <Content Include="fonts\roboto\Roboto-Bold.ttf" />
+    <Content Include="fonts\roboto\Roboto-Bold.woff" />
+    <Content Include="fonts\roboto\Roboto-Bold.woff2" />
+    <Content Include="fonts\roboto\Roboto-Light.eot" />
+    <Content Include="fonts\roboto\Roboto-Light.ttf" />
+    <Content Include="fonts\roboto\Roboto-Light.woff" />
+    <Content Include="fonts\roboto\Roboto-Light.woff2" />
+    <Content Include="fonts\roboto\Roboto-Medium.eot" />
+    <Content Include="fonts\roboto\Roboto-Medium.ttf" />
+    <Content Include="fonts\roboto\Roboto-Medium.woff" />
+    <Content Include="fonts\roboto\Roboto-Medium.woff2" />
+    <Content Include="fonts\roboto\Roboto-Regular.eot" />
+    <Content Include="fonts\roboto\Roboto-Regular.ttf" />
+    <Content Include="fonts\roboto\Roboto-Regular.woff" />
+    <Content Include="fonts\roboto\Roboto-Regular.woff2" />
+    <Content Include="fonts\roboto\Roboto-Thin.eot" />
+    <Content Include="fonts\roboto\Roboto-Thin.ttf" />
+    <Content Include="fonts\roboto\Roboto-Thin.woff" />
+    <Content Include="fonts\roboto\Roboto-Thin.woff2" />
+    <Content Include="Content\sass\mdb.scss" />
+    <Content Include="Content\sass\mdb\free\data\_colors.scss" />
+    <Content Include="Content\sass\mdb\free\data\_functions.scss" />
+    <Content Include="Content\sass\mdb\free\data\_mixins.scss" />
+    <Content Include="Content\sass\mdb\free\data\_prefixer.scss" />
+    <Content Include="Content\sass\mdb\free\data\_variables-b4.scss" />
+    <Content Include="Content\sass\mdb\free\data\_variables.scss" />
+    <Content Include="Content\sass\mdb\free\_animations.scss" />
+    <Content Include="Content\sass\mdb\free\_badge.scss" />
+    <Content Include="Content\sass\mdb\free\_breadcrumb.scss" />
+    <Content Include="Content\sass\mdb\free\_buttons.scss" />
+    <Content Include="Content\sass\mdb\free\_cards-basic.scss" />
+    <Content Include="Content\sass\mdb\free\_carousel-basic.scss" />
+    <Content Include="Content\sass\mdb\free\_collapse.scss" />
+    <Content Include="Content\sass\mdb\free\_deprecated.scss" />
+    <Content Include="Content\sass\mdb\free\_dropdowns.scss" />
+    <Content Include="Content\sass\mdb\free\_footer.scss" />
+    <Content Include="Content\sass\mdb\free\_forms-basic.scss" />
+    <Content Include="Content\sass\mdb\free\_global.scss" />
+    <Content Include="Content\sass\mdb\free\_helpers.scss" />
+    <Content Include="Content\sass\mdb\free\_jumbotron.scss" />
+    <Content Include="Content\sass\mdb\free\_list-group.scss" />
+    <Content Include="Content\sass\mdb\free\_masks.scss" />
+    <Content Include="Content\sass\mdb\free\_modals.scss" />
+    <Content Include="Content\sass\mdb\free\_msc.scss" />
+    <Content Include="Content\sass\mdb\free\_navbar.scss" />
+    <Content Include="Content\sass\mdb\free\_pagination.scss" />
+    <Content Include="Content\sass\mdb\free\_progress.scss" />
+    <Content Include="Content\sass\mdb\free\_tables.scss" />
+    <Content Include="Content\sass\mdb\free\_typography.scss" />
+    <Content Include="Content\sass\mdb\free\_waves.scss" />
+    <Content Include="Content\sass\mdb\_custom.scss" />
     <None Include="packages.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_MainLayout.cshtml" />
@@ -171,7 +257,6 @@
     <Content Include="Views\Shared\_Created.cshtml" />
     <Content Include="Views\bills\Create.cshtml" />
     <Content Include="Views\bills\Delete.cshtml" />
-    <Content Include="Views\bills\Details.cshtml" />
     <Content Include="Views\bills\Edit.cshtml" />
     <Content Include="Views\bills\Index.cshtml" />
     <Content Include="Views\items\Create.cshtml" />
@@ -179,6 +264,9 @@
     <Content Include="Views\items\Details.cshtml" />
     <Content Include="Views\items\Edit.cshtml" />
     <Content Include="Views\items\Index.cshtml" />
+    <Content Include="Views\Shared\_SubLayout.cshtml" />
+    <Content Include="Views\bills\invoice.cshtml" />
+    <Content Include="Views\bills\Details.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -195,6 +283,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201802191129174_CurruncyTable.resx">
       <DependentUpon>201802191129174_CurruncyTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802201218272_tableSideBuy.resx">
+      <DependentUpon>201802201218272_tableSideBuy.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
